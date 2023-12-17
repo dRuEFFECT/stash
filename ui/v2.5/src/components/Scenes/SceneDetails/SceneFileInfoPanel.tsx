@@ -89,8 +89,9 @@ const FileInfoPanel: React.FC<IFileInfoPanelProps> = (
         />
         <URLField
           id="path"
-          url={`file://${props.file.path}`}
-          value={`file://${props.file.path}`}
+          url={`/custom/${props.scene.path.substr(2).replaceAll("\\","/")}`}
+          target="_self"
+          value={`/custom/${props.scene.path.substr(2).replaceAll("\\","/")}`}
           truncate
         />
         {renderFileSize()}
